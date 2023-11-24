@@ -1,12 +1,4 @@
-terraform {
-  cloud {
-    organization = "doron-org"
 
-    workspaces {
-      name = "terraform-recipe"
-    }
-  }
-}
 
 provider "aws" {
   region = "eu-central-1"
