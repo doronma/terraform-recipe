@@ -1,10 +1,10 @@
 terraform {
-  backend "s3" {
-    bucket         = "recipe-app-api-devops-state-bucket"
-    key            = "recipe-app.tfstate"
-    region         = "eu-central-1"
-    encrypt        = true
-    dynamodb_table = "recipe-app-api-devops-tf-state-lock"
+  cloud {
+    organization = "doron-org"
+
+    workspaces {
+      name = "terraform-recipe"
+    }
   }
 }
 
